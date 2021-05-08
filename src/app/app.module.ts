@@ -14,6 +14,10 @@ import { ServerElementComponent } from './Components_and_Databinding/lesson-star
 import { GameControlComponent } from './Components_and_Databinding/lesson-assignment/game-control/game-control.component';
 import { OddComponent } from './Components_and_Databinding/lesson-assignment/odd/odd.component';
 import { EvenComponent } from './Components_and_Databinding/lesson-assignment/even/even.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { BasicHighlightDirective } from './directives/basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './directives/better-highlight/better-highlight.directive';
+import { UnlessDirective } from './directives/unless.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { EvenComponent } from './Components_and_Databinding/lesson-assignment/ev
     ServerElementComponent,
     GameControlComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    DirectivesComponent,
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
