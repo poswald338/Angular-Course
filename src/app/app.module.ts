@@ -18,6 +18,15 @@ import { DirectivesComponent } from './directives/directives.component';
 import { BasicHighlightDirective } from './directives/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './directives/better-highlight/better-highlight.directive';
 import { UnlessDirective } from './directives/unless.directive';
+import { LessonComponent } from './Services_Dependency_Injection/lesson/lesson.component';
+import { AccountComponent } from './Services_Dependency_Injection/lesson/account/account.component';
+import { NewAccountComponent } from './Services_Dependency_Injection/lesson/new-account/new-account.component';
+import { ActiveUsersComponent } from './Services_Dependency_Injection/assignment/active-users/active-users.component';
+import { InactiveUsersComponent } from './Services_Dependency_Injection/assignment/inactive-users/inactive-users.component';
+import { AssignmentComponent } from './Services_Dependency_Injection/assignment/assignment.component';
+import { AccountsService } from './Services_Dependency_Injection/lesson/accounts.service';
+import { LoggingService } from './Services_Dependency_Injection/lesson/logging.service';
+import { CounterService } from './Services_Dependency_Injection/assignment/counter.service';
 
 @NgModule({
   declarations: [
@@ -36,13 +45,19 @@ import { UnlessDirective } from './directives/unless.directive';
     DirectivesComponent,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    LessonComponent,
+    AccountComponent,
+    NewAccountComponent,
+    ActiveUsersComponent,
+    InactiveUsersComponent,
+    AssignmentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AccountsService, LoggingService, CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
